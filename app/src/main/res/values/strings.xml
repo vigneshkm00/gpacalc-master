@@ -1,0 +1,1109 @@
+<resources>
+    <string name="app_name">Chesmo AU gpa/cgpa Calculator</string>
+
+    <string name="open">OPEN</string>
+    <string name="close">CLOSE</string>
+    <string-array name="grades">
+        <item>S</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>U</item>
+    </string-array>
+    <string-array name="grades2">
+        <item>O</item>
+        <item>A+</item>
+        <item>A</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>RA</item>
+    </string-array>
+    <string-array name="Dept" style="bold">
+        <item>Information Technology</item>
+        <item>Mechanical</item>
+        <item>Civil</item>
+        <item>Electrical and Electronicals</item>
+        <item>Electronic and Communication</item>
+        <item>Computer Science</item>
+    </string-array>
+    <string-array name="Regu">
+        <item>2013</item>
+        <item>2017</item>
+    </string-array>
+    <string-array name="sem">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+    </string-array>
+    <string-array name="it1r17">
+        <item>Communication English</item>
+        <item>Engineering Mathematics - 1</item>
+        <item>Engineering Physics</item>
+        <item>Engineering Chemistry</item>
+        <item>Problem Solving and Python Programming</item>
+        <item>Engineering Graphics</item>
+        <item>Problem Solving and Python Programming Lab</item>
+        <item>Physics and Chemistry Lab</item>
+    </string-array>
+    <integer-array name="it1r17c">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="civil2r17">
+        <item>Technical English</item>
+        <item>Engineering Mathematics -II</item>
+        <item>Physics For Civil Engineering</item>
+        <item>Basic Electrical and Electronics Engineering</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Engineering Mechanics</item>
+        <item>Engineering Practices Laboratory</item>
+        <item>Computer Aided Building Drawing</item>
+    </string-array>
+    <integer-array name="civil2r17c">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="mech2r17">
+        <item>Technical English</item>
+        <item>Engineering Mathematics -II</item>
+        <item>Materials Science</item>
+        <item>Basic Electrical, Electronics and Instrumentation Engineering</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Engineering Mechanics</item>
+        <item>Engineering Practices Laboratory</item>
+        <item>Basic Electrical, Electronics and Instrumentation Engineering Lab </item>
+    </string-array>
+    <integer-array name="mech2r17c">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="eee2r17">
+        <item>Technical English</item>
+        <item>Engineering Mathematics -II</item>
+        <item>Physics for Electronics Engineering</item>
+        <item>Basic Civil and Mechanical Engineering</item>
+        <item>Circuit Theory</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Engineering Practices Laboratory</item>
+        <item>Electric Circuits Lab</item>
+    </string-array>
+    <integer-array name="eee2r17c">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="ece2r17">
+        <item>Technical English</item>
+        <item>Engineering Mathematics -II</item>
+        <item>Physics for Electronics Engineering</item>
+        <item>Basic Electrical and Instrumentation Engineering</item>
+        <item>Circuit Analysis</item>
+        <item>Electronic Devices</item>
+        <item>Circuits and Devices Lab</item>
+        <item>Engineering Practices Laboratory</item>
+    </string-array>
+    <integer-array name="ece2r17c">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="it2r17">
+        <item>Technical English</item>
+        <item>Engineering Mathematics -II</item>
+        <item>Physics for Information Science</item>
+        <item>Basic Electrical and Measurement Engineering</item>
+        <item>Information Technology Essentials</item>
+        <item>Programming in C</item>
+        <item>Engineering Practices Laboratory</item>
+        <item>C Programming Lab</item>
+        <item>Information Technology Essentials Laboratory</item>
+    </string-array>
+    <integer-array name="it2r17c">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+    <string-array name="cse2r17">
+        <item>Technical English</item>
+        <item>Engineering Mathematics -II</item>
+        <item>Physics for Information Science</item>
+        <item>Basic Electrical, Electronics and Measurement Engineering</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Programming in C</item>
+        <item>Engineering Practices Laboratory</item>
+        <item>C Programming Lab</item>
+    </string-array>
+    <integer-array name="cse2r17c">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+
+    <integer-array name="it1crdts">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+
+    <integer-array name="it2credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="it4credits">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+
+    <integer-array name="it5credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <integer-array name="it6credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <integer-array name="it7credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <integer-array name="it8credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+    </integer-array>
+    <string-array name="it1">
+        <item>Technical English I</item>
+        <item>Mathematics I</item>
+        <item>Engineering Graphics</item>
+        <item>Engineering Physics I</item>
+        <item>Engineering Chemistry I</item>
+        <item>Computer Programming</item>
+        <item>Computer Practices Laboratory</item>
+        <item>Engineering Practices Laboratory</item>
+        <item>Physics and Chemistry Laboratory</item>
+    </string-array>
+
+
+    <string-array name="it2">
+        <item>Technical English – II</item>
+        <item>Mathematics – II</item>
+        <item>Engineering Physics – II</item>
+        <item>Engineering Chemistry – II</item>
+        <item>Digital Principles and System Design</item>
+        <item>Programming and Data Structures I</item>
+        <item>Digital Laboratory</item>
+        <item>Programming and Data Structures Laboratory I</item>
+        <item>Physics and Chemistry Laboratory - II</item>
+    </string-array>
+
+
+    <string-array name="it3">
+        <item>Transforms and Partial Differential   Equations</item>
+        <item>Programming and Data Structure II</item>
+        <item>Database Management Systems</item>
+        <item>Computer Architecture</item>
+        <item>Analog and Digital Communication</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Programming and Data Structure   Laboratory II</item>
+        <item>Database Management Systems Laboratory</item>
+        <item>Digital Communication Laboratory</item>
+
+    </string-array>
+    <integer-array name="it3credits">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+    <string-array name="it4">
+        <item>Probability and Queueing Theory</item>
+        <item>Operating Systems</item>
+        <item>Design and Analysis of Algorithms</item>
+        <item>Microprocessor and Microcontroller</item>
+        <item>Software Engineering</item>
+        <item>Microprocessor and Microcontroller Laboratory</item>
+        <item>Operating Systems Laboratory</item>
+        <item>Software Engineering Laboratory</item>
+
+    </string-array>
+    <string-array name="it5">
+        <item>Digital Signal Processing</item>
+        <item>Web Programming</item>
+        <item>Object Oriented Analysis and Design</item>
+        <item>Wireless Communication</item>
+        <item>Graphics and Multimedia</item>
+        <item>Computer Networks</item>
+        <item>Case Tools Laboratory</item>
+        <item>Web Programming Laboratory</item>
+        <item>Networks Laboratory</item>
+
+    </string-array>
+
+    <string-array name="it6">
+        <item>Distributed Systems</item>
+        <item>Mobile Computing</item>
+        <item>Compiler Design</item>
+        <item>Artificial Intelligence</item>
+        <item>Software Architectures</item>
+        <item>Elective 1</item>
+        <item>Mobile Application Development Laboratory</item>
+        <item>Compiler Laboratory</item>
+        <item>Communication and Soft Skills - Laboratory Based</item>
+
+    </string-array>
+
+    <string-array name="it7">
+        <item>Cryptography and Network Security</item>
+        <item>Information Management</item>
+        <item>Grid and Cloud Computing</item>
+        <item>Data Ware Housing and Data Mining</item>
+        <item>Elective II</item>
+        <item>Data Mining Laboratory</item>
+        <item>Security Laboratory</item>
+        <item>Grid and Cloud Computing Laboratory</item>
+
+    </string-array>
+
+    <string-array name="it8">
+        <item>Project Work</item>
+        <item>Service Oriented Architecture</item>
+        <item>Elective III</item>
+        <item>Elective IV</item>
+        <item>Elective V</item>
+
+    </string-array>
+    <string-array name="cse1">
+        <item>Technical English I</item>
+        <item>Mathematics I</item>
+        <item>Engineering Graphics</item>
+        <item>Engineering Physics I</item>
+        <item>Engineering Chemistry I</item>
+        <item>Computer Programming</item>
+        <item>Computer Practices Laboratory</item>
+        <item>Engineering Practices Laboratory</item>
+        <item>Physics and Chemistry Laboratory</item>
+    </string-array>
+
+    <string-array name="cse2">
+        <item>Technical English – II</item>
+        <item>Mathematics – II</item>
+        <item>Engineering Physics – II</item>
+        <item>Engineering Chemistry – II</item>
+        <item>Digital Principles and System Design</item>
+        <item>Programming and Data Structures I</item>
+        <item>Digital Laboratory</item>
+        <item>Programming and Data Structures Laboratory I</item>
+        <item>Physics and Chemistry Laboratory - II</item>
+    </string-array>
+
+    <string-array name="cse3">
+        <item>Transforms and Partial Differential Equations</item>
+        <item>Programming and Data Structure II</item>
+        <item>Database Management Systems</item>
+        <item>Computer Architecture</item>
+        <item>Analog and Digital Communication</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Programming and Data Structure Laboratory II</item>
+        <item>Database Management Systems Laboratory</item>
+
+    </string-array>
+    <integer-array name="cse3credits">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="cse4">
+        <item>Probability and Queueing Theory</item>
+        <item>Computer Networks</item>
+        <item>Operating Systems</item>
+        <item>Design and Analysis of Algorithms</item>
+        <item>Microprocessor and Microcontroller</item>
+        <item>Software Engineering</item>
+        <item>Networks Laboratory</item>
+        <item>Microprocessor and Microcontroller Laboratory</item>
+        <item>Operating Systems Laboratory</item>
+
+    </string-array>
+    <integer-array name="cse4credits">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="cse5">
+        <item>Discrete Mathematics</item>
+        <item>Internet Programming</item>
+        <item>Object Oriented Analysis and Design</item>
+        <item>Theory of Computation</item>
+        <item>Computer Graphics</item>
+        <item>Case Tools Laboratory</item>
+        <item>Internet Programming Laboratory</item>
+        <item>Computer Graphics Laboratory</item>
+
+    </string-array>
+    <integer-array name="cse5credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <string-array name="cse6">
+        <item>Digital Signal Processing</item>
+        <item>Distributed Systems</item>
+        <item>Mobile Computing</item>
+        <item>Compiler Design</item>
+        <item>Artificial Intelligence</item>
+        <item>Elective 1</item>
+        <item>Mobile Application Development Laboratory</item>
+        <item>Compiler Laboratory</item>
+        <item>Communication and Soft Skills - Laboratory Based</item>
+
+    </string-array>
+    <integer-array name="cse6credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+    <string-array name="cse7">
+        <item>Cryptography and Network Security</item>
+        <item>Graph Theory and Applications</item>
+        <item>Grid and Cloud Computing</item>
+        <item>Resource Management Techniques</item>
+        <item>Elective II</item>
+        <item>Elective III</item>
+        <item>Security Laboratory</item>
+        <item>Grid and Cloud Computing Laboratory</item>
+
+    </string-array>
+    <integer-array name="cse7credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="cse8">
+        <item>Project Work</item>
+        <item>Multi – Core ArchitectureProgramming</item>
+        <item>Elective IV</item>
+        <item>Elective V</item>
+    </string-array>
+    <string-array name="civil2">
+        <item>Techincal english II</item>
+        <item>Mathematics II</item>
+        <item>Basic Eng.and Elec. Eng.</item>
+        <item>Engineering Mechanics</item>
+        <item>Engineering physics II</item>
+        <item>Engineering chemistry II</item>
+        <item>Computer Aided Design and Modeling lab</item>
+        <item>Physics and chemistry lab</item>
+    </string-array>
+
+    <string-array name="civil3">
+        <item>Transforms and Partial Differential Equations</item>
+        <item>Mechanics of solids</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Engineering Geology</item>
+        <item>Mechanics of fluids</item>
+        <item>Surveying 1</item>
+        <item>survey practical 1</item>
+        <item>Computer aided building drawing</item>
+
+    </string-array>
+    <string-array name="civil4">
+        <item>Numerical methods</item>
+        <item>Strength of materials</item>
+        <item>Applied hydraulic engineering</item>
+        <item>Construction materials</item>
+        <item>Surveying II</item>
+        <item>Soil mechanics</item>
+        <item>Strength of materials laboratory</item>
+        <item>Hydraulic eng. laboratory</item>
+        <item>Surveying practical II</item>
+    </string-array>
+    <string-array name="civil5">
+        <item>Structural Analysis I</item>
+        <item>Foundation Engineering</item>
+        <item>Environmental Engineering I</item>
+        <item>Highway Engineering</item>
+        <item>Design of Reinforced Concrete Elements</item>
+        <item>Construction Techniques, Equipment and Practice</item>
+        <item>Communication and Soft skills- Laboratory Based</item>
+        <item>Soil Mechanics Laboratory</item>
+        <item>Survey Camp</item>
+    </string-array>
+    <string-array name="civil6">
+        <item>Structural analysis II</item>
+        <item>Design of steel structures</item>
+        <item>Design of Reinforced Concrete Brick Masonry Structures</item>
+        <item>Railways, Airports and Harbour Engineering</item>
+        <item>Environmental Engineering II </item>
+        <item>Elective I</item>
+        <item>Environmental Engineering Laboratory</item>
+        <item>Concrete and Highway Engineering Laboratory</item>
+    </string-array>
+    <integer-array name="civil6credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="civil7">
+        <item>Structural Dynamics and Earthquake Engineering</item>
+        <item>Prestressed Concrete Structures</item>
+        <item>Water Resources and Irrigation Engineering</item>
+        <item>Estimation and Quantity Surveying</item>
+        <item>Elective II</item>
+        <item>Elective III</item>
+        <item>CAD and Drafting Laboratory</item>
+        <item>Design Project</item>
+    </string-array>
+    <string-array name="civil8">
+        <item>Project Work</item>
+        <item>Principles of Management</item>
+        <item>Elective IV </item>
+        <item>Elective V </item>
+    </string-array>
+    <string-array name="ece2">
+        <item>Technical English – II</item>
+        <item>Mathematics – II</item>
+        <item>Circuit Theory</item>
+        <item>Engineering Physics – II</item>
+        <item>Engineering Chemistry – II</item>
+        <item>Electronic Devices</item>
+        <item>Circuits and Devices Laboratory</item>
+        <item>Physics and Chemistry Laboratory - II</item>
+    </string-array>
+
+
+    <string-array name="ece3">
+        <item>Transforms and Partial Differential Equations</item>
+        <item>Electrical Engineering and Instrumentation</item>
+        <item>Signals and Systems</item>
+        <item>Electronic Circuits- I</item>
+        <item>Object Oriented Programming and Data Structures</item>
+        <item>Digital Electronics</item>
+        <item>Analog and Digital Circuits Laboratory</item>
+        <item>OOPS and Data Structures Laboratory</item>
+    </string-array>
+
+
+    <string-array name="ece4">
+        <item>Probability and Random Processes</item>
+        <item>Electromagnetic Fields</item>
+        <item>Electronic Circuits II</item>
+        <item>Communication Theory</item>
+        <item>Linear Integrated Circuits</item>
+        <item>Control System Engineering</item>
+        <item>Circuit and Simulation Integrated Laboratory</item>
+        <item>Linear Integrated Circuit Laboratory</item>
+        <item>Electrical Engineering and Control System Laboratory</item>
+    </string-array>
+
+
+    <string-array name="ece5">
+        <item>Principles of Digital Signal Processing</item>
+        <item>Transmission Lines and Wave Guides</item>
+        <item>Digital Communication</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Microprocessor and Microcontroller</item>
+        <item>Digital Signal Processing Laboratory</item>
+        <item>Communication System Laboratory</item>
+        <item>Microprocessor and Microcontroller Laboratory</item>
+    </string-array>
+
+
+    <string-array name="ece6">
+        <item>Principles of Management</item>
+        <item>Computer Architecture</item>
+        <item>Computer Networks</item>
+        <item>VLSI Design</item>
+        <item>Antenna and Wave propagation</item>
+        <item>Elective  I</item>
+        <item>Computer Networks Laboratory</item>
+        <item>VLSI Design Laboratory</item>
+        <item>Communication and Soft Skills – Laboratory Based</item>
+    </string-array>
+
+
+    <string-array name="ece7">
+        <item>RF and Microwave Engineering</item>
+        <item>Optical Communication and Networks</item>
+        <item>Embedded and Real Time Systems</item>
+        <item>Elective  II</item>
+        <item>Elective III</item>
+        <item>Elective IV</item>
+        <item>Embedded Laboratory</item>
+        <item>Optical and Microwave Laboratory</item>
+    </string-array>
+
+
+    <string-array name="ece8">
+        <item>Project Work</item>
+        <item>Wireless Communication</item>
+        <item>Wireless Networks</item>
+        <item>Elective V</item>
+        <item>Elective VI</item>
+
+    </string-array>
+    <string-array name="eee2">
+        <item>Technical English  II</item>
+        <item>Mathematics  II</item>
+        <item>Basic Civil and Mechanical Engineering</item>
+        <item>Circuit Theory</item>
+        <item>Engineering Physics  II</item>
+        <item>Engineering Chemistry  II</item>
+        <item>Computer Programming Laboratory</item>
+        <item>Electric Circuits Laboratory</item>
+        <item>Physics and Chemistry Laboratory  II</item>
+    </string-array>
+    <string-array name="eee3">
+        <item>Transforms and Partial Differential Equations</item>
+        <item>Digital Logic Circuits</item>
+        <item>Electromagnetic Theory</item>
+        <item>Electronic Devices and Circuits</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Linear Integrated Circuits and Applications</item>
+        <item>Electronics Laboratory</item>
+        <item>Linear and Digital Integrated Circuits Laboratory</item>
+    </string-array>
+    <string-array name="eee4">
+        <item>Numerical Methods</item>
+        <item>Electrical Machines  I</item>
+        <item>Object Oriented Programming</item>
+        <item>Transmission and Distribution</item>
+        <item>Discrete Time Systems and Signal Processing</item>
+        <item>Measurements and Instrumentation</item>
+        <item>Object Oriented Programming Laboratory</item>
+        <item>Electrical Machines Laboratory - I</item>
+
+    </string-array>
+    <string-array name="eee5">
+        <item>Electrical Machines  II</item>
+        <item>Control Systems</item>
+        <item>Power System Analysis</item>
+        <item>Microprocessors and Microcontrollers</item>
+        <item>Power Plant Engineering</item>
+        <item>Power Electronics</item>
+        <item>Control and Instrumentation Laboratory</item>
+        <item>Communication and Soft Skills- Laboratory Based</item>
+        <item>Electrical Machines Laboratory - II</item>
+    </string-array>
+    <string-array name="eee6">
+        <item>Design of Electrical Machines</item>
+        <item>Communication Engineering</item>
+        <item>Solid State Drives</item>
+        <item>Embedded Systems</item>
+        <item>Power System Operation and Control</item>
+        <item>Elective - I</item>
+        <item>Power Electronics and Drives Laboratory</item>
+        <item>Microprocessors and Microcontrollers Laboratory</item>
+        <item>Presentation Skills and Technical Seminar</item>
+    </string-array>
+    <string-array name="eee7">
+        <item>High Voltage Engineering</item>
+        <item>Protection and Switchgear</item>
+        <item>Special Electrical Machines</item>
+        <item>Principles of Management</item>
+        <item>Elective  II</item>
+        <item>Elective III</item>
+        <item>Power System Simulation Laboratory</item>
+        <item>Comprehension</item>
+    </string-array>
+    <string-array name="eee8">
+        <item>Project Work</item>
+        <item>Electric Energy Generation, Utilization and Conservation</item>
+        <item>Elective IV</item>
+        <item>Elective V</item>
+    </string-array>
+    <string-array name="mech2">
+        <item>Technical English – II</item>
+        <item>Mathematics – II</item>
+        <item>Basic Electrical and Electronics Engineering</item>
+        <item>Engineering Mechanics</item>
+        <item>Engineering Physics – II</item>
+        <item>Engineering Chemistry – II</item>
+        <item>Computer Aided Drafting and Modeling Laboratory</item>
+        <item>Physics and Chemistry Laboratory - II</item>
+
+    </string-array>
+    <string-array name="mech3">
+        <item>Transforms and Partial Differential Equations</item>
+        <item>Strength of Materials</item>
+        <item>Engineering Thermodynamics</item>
+        <item>Fluid Mechanics and Machinery</item>
+        <item>Manufacturing Technology – I</item>
+        <item>Electrical Drives and Controls</item>
+        <item>Manufacturing Technology Laboratory – I</item>
+        <item>Fluid Mechanics and Machinery Laboratory</item>
+        <item>Electrical Engineering Laboratory</item>
+
+    </string-array>
+    <string-array name="mech4">
+        <item>Statistics and Numerical Methods</item>
+        <item>Kinematics of Machinery</item>
+        <item>Manufacturing Technology– II</item>
+        <item>Engineering Materials and Metallurgy</item>
+        <item>Environmental Science and Engineering</item>
+        <item>Thermal Engineering</item>
+        <item>Manufacturing Technology Laboratory–II</item>
+        <item>Thermal Engineering Laboratory – I</item>
+        <item>Strength of Materials Laboratory</item>
+
+    </string-array>
+
+    <string-array name="mech5">
+        <item>Computer Aided Design</item>
+        <item>Heat and Mass Transfer</item>
+        <item>Design of Machine Elements</item>
+        <item>Metrology and Measurements</item>
+        <item>Dynamics of Machines</item>
+        <item>Professional Ethics in Engineering</item>
+        <item>Dynamics Laboratory</item>
+        <item>Thermal Engineering Laboratory-II</item>
+        <item>Metrology and Measurements Laboratory</item>
+
+    </string-array>
+    <string-array name="mech6">
+        <item>Design of Transmission Systems</item>
+        <item>Principles of Management</item>
+        <item>Automobile Engineering</item>
+        <item>Finite Element Analysis</item>
+        <item>Gas Dynamics and Jet Propulsion</item>
+        <item>Elective – I</item>
+        <item>C.A.D. / C.A.M. Laboratory</item>
+        <item>Design and Fabrication Project</item>
+        <item>Communication Skills - Laboratory Based</item>
+    </string-array>
+    <integer-array name="mech6credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <string-array name="mech7">
+        <item>Power Plant Engineering</item>
+        <item>Mechatronics</item>
+        <item>Computer Integrated Manufacturing Systems</item>
+        <item>Total Quality Management</item>
+        <item>Elective – II</item>
+        <item>Elective – III</item>
+        <item>Simulation and Analysis Laboratory</item>
+        <item>Mechatronics Laboratory</item>
+        <item>Comprehension</item>
+
+    </string-array>
+    <string-array name="mech8">
+        <item>Project Work</item>
+        <item>Engineering Economics</item>
+        <item>Elective IV</item>
+        <item>Elective V</item>
+
+    </string-array>
+    <integer-array name="ece2credits">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+    <integer-array name="civil7credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="civil5credits">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+    <integer-array name="civil4credits">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <integer-array name="civil3credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="civil2credits">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+    <integer-array name="cse8credits">
+        <item>6</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+
+    </integer-array>
+
+
+    <integer-array name="ece3credits">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="ece4credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+
+    <integer-array name="ece5credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+
+    <integer-array name="ece6credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="ece7credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="ece8credits">
+        <item>6</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+
+    </integer-array>
+
+    <integer-array name="eee2credits">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+
+    </integer-array>
+    <integer-array name="eee3credits">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <integer-array name="eee4credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="eee5credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <integer-array name="eee6credits">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+
+    </integer-array>
+    <integer-array name="eee7credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+
+    </integer-array>
+    <integer-array name="mech2credits">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+
+    </integer-array>
+    <integer-array name="mech3credits">
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+
+    <integer-array name="mech4credits">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+    <integer-array name="mech5credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+
+    </integer-array>
+
+    <integer-array name="mech7credits">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item id="sem1">26</item>
+    </integer-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="save">Save</string>
+</resources>

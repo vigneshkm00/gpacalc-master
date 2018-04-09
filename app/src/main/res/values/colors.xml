@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#078ffa</color>
+    <color name="colorPrimaryDark">#1b82d4</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="spinnerblue">#FF235ED6</color>
+
+    <!--OnBoard-->
+
+</resources>
