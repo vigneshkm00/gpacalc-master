@@ -109,20 +109,38 @@ public class Main3Activity extends AppCompatActivity implements dialogbox.dialog
     }
     public void saveaspdf()
     {
-        final String[] arr = getIntent().getStringArrayExtra("subj");
-        final int[] crdts = getIntent().getIntArrayExtra("cr");
-        final String[] selections = getIntent().getStringArrayExtra("grds");
-        final String dep = getIntent().getStringExtra("gpa");
-        //   Toast.makeText(getApplicationContext(),selections[1]+arr[1]+crdts[1], Toast.LENGTH_SHORT).show();
-                final Bundle sub1 = new Bundle();
-                sub1.putStringArray("subj", arr);
-                sub1.putIntArray("cr", crdts);
-                sub1.putString("gpa", dep);
-                sub1.putStringArray("grds", selections);
-                final Intent i = new Intent(Main3Activity.this, pdfdisplay.class);
-                // i.putStringArrayListExtra("Sbj", arr);
-                i.putExtras(sub1);
-                startActivityForResult(i,101);
+        mode = getIntent().getStringExtra("mode");
+        if(mode.equals("GPA")) {
+            final String[] arr = getIntent().getStringArrayExtra("subj");
+            final int[] crdts = getIntent().getIntArrayExtra("cr");
+            final String[] selections = getIntent().getStringArrayExtra("grds");
+            final String dep = getIntent().getStringExtra("gpa");
+            //   Toast.makeText(getApplicationContext(),selections[1]+arr[1]+crdts[1], Toast.LENGTH_SHORT).show();
+            final Bundle sub1 = new Bundle();
+            sub1.putStringArray("subj", arr);
+            sub1.putIntArray("cr", crdts);
+            sub1.putString("gpa", dep);
+            sub1.putStringArray("grds", selections);
+            final Intent i = new Intent(Main3Activity.this, pdfdisplay.class);
+            // i.putStringArrayListExtra("Sbj", arr);
+            i.putExtras(sub1);
+            startActivityForResult(i,101);
+        }
+        else{
+
+            final String[] arr = getIntent().getStringArrayExtra("subj");
+            //   Toast.makeText(getApplicationContext(),selections[1]+arr[1]+crdts[1], Toast.LENGTH_SHORT).show();
+            final Bundle sub1 = new Bundle();
+            sub1.putStringArray("subj", arr);
+            final String cgpa1 = String.format("%.2f",cgpa).toString();
+            final Intent i = new Intent(Main3Activity.this, pdfdisplay.class);
+            // i.putStringArrayListExtra("Sbj", arr);
+            i.putExtra("cgpa",cgpa1);
+            i.putExtras(sub1);
+            startActivityForResult(i,101);
+        }
+
+
     }
 
     @Override

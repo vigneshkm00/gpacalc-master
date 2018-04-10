@@ -565,6 +565,8 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                         Intent j = new Intent(Main2Activity.this,MainActivity.class);
                         j.putExtra("sum", sum1);
                         j.putExtra("credit", credit1);
+                        j.putExtra("gpa",s);
+
                         setResult(sem1,j);
                         finish();
                     }

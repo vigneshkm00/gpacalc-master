@@ -29,15 +29,16 @@
         <activity
             android:name=".Main3Activity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".showgpaActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".showgpaActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".pdfdisplay"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Web_view"
             android:parentActivityName=".MainActivity" />
-
+        <activity android:name=".pdf1display"></activity>
     </application>
 
 </manifest>

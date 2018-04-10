@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
    static float sum=0;
    static float su;
    static int cr;
+   static String gpas[];
+   static int seml=0;
    Button show;
    private DrawerLayout drl;
    private ActionBarDrawerToggle adt;
@@ -157,6 +159,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Check which request we're responding t
         Spinner s3 = (Spinner) findViewById(R.id.spinner3);
         String sem = s3.getSelectedItem().toString();
+        gpas[seml] =data.getStringExtra("gpa");
+        seml++;
         int sems1 = Integer.parseInt(sem);
         super.onActivityResult(requestCode, resultCode, data);
         su = su + Float.parseFloat(data.getStringExtra("sum"));
@@ -181,10 +185,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Intent i = new Intent(MainActivity.this, Main3Activity.class);
         String su1 = String.format("%f",su);
         String cr1 = String.format("%d",cr);
+        final Bundle sub1 = new Bundle();
+        sub1.putStringArray("gpas",gpas);
         i.putExtra("sum",su1);
         i.putExtra("credit",cr1);
         i.putExtra("mode",mode1);
         i.putExtra("sem",sem);
+        i.putExtras(sub1);
         startActivity(i);
     }
     @Override
