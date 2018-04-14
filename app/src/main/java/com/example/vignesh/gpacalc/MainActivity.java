@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
    static float su;
    static int cr;
    static int seml=0;
-   static String[] gpas= new String[8];
+     String[] gpas= new String[8];
    int l=0;
    Button show;
    private DrawerLayout drl;
@@ -169,39 +169,46 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         {
             case 1:
                  gpas[l] = gpa;
-                break;
-            case 2:
                 l++;
+                 break;
+            case 2:
+             //   l++;
                 gpas[l] = gpa;
+                l++;
                 break;
             case 3:
-                l++;
+                //l++;
                 gpas[l] = gpa;
+                l++;
                 break;
             case 4:
-                l++;
+                //l++;
                 gpas[l] = gpa;
+                l++;
                 break;
             case 5:
-                l++;
+//                l++;
                 gpas[l] = gpa;
+                l++;
                 break;
             case 6:
-                l++;
+//                l++;
                 gpas[l] = gpa;
+                l++;
                 break;
             case 7:
-                l++;
+//                l++;
                 gpas[l] = gpa;
+                l++;
                 break;
             case 8:
                 gpas[l] = gpa;
-                l++;
+              l++;
                 break;
 
         }
         if(resultCode==sems1) {
-            Toast.makeText(getApplicationContext(),"1:"+gpas[1]+"2:"+gpas[2]+"3:"+gpas[3]+".",Toast.LENGTH_LONG).show();
+       //     Toast.makeText(getApplicationContext(),"1:"+gpas[0]+"2:"+gpas[1]+"3:"+gpas[2]+".",Toast.LENGTH_LONG).show();
             showresult();
         }
 

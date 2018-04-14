@@ -31,6 +31,8 @@
 
         <Button
             android:id="@+id/gpbtn"
+            android:background="@drawable/rounded_edge"
+            android:textColor="?attr/colorBackgroundFloating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

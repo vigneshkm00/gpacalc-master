@@ -71,6 +71,7 @@ public class pdf1display extends AppCompatActivity {
         sve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Please wait while we preparing PDF for you",Toast.LENGTH_SHORT).show();
                 regNo=rn.getText().toString();
                 if (rn.getText().toString().isEmpty()) {
                     rn.setError("Body is empty");
@@ -192,7 +193,7 @@ public class pdf1display extends AppCompatActivity {
         //  float w=image.getScaledWidth();
         //float h=image.getScaledHeight();
 //Font font=FontFactory.getFont(FONT, BaseFont.IDENTITY_H,BaseFont.EMBEDDED);
-        Font font= new Font(Font.FontFamily.UNDEFINED,20);
+        Font font= new Font(Font.FontFamily.HELVETICA,20);
         image.setAbsolutePosition(80f,250f);
         image.scaleAbsolute(410f,450f);
 
@@ -214,32 +215,37 @@ public class pdf1display extends AppCompatActivity {
 
 
 
-        PdfPTable table=new PdfPTable(3);
+        PdfPTable table=new PdfPTable(2);
 
         table.setWidthPercentage(75);
 
         table.setSpacingAfter(1f);
         table.setSpacingBefore(1f);
-        float[] cwidth={0.7f,4.3f,1f};
+        float[] cwidth={2f,4f};
         table.setWidths(cwidth);
-        PdfPCell c1=new PdfPCell(new Paragraph("\n S.No\n "));
-        PdfPCell c2=new PdfPCell(new Paragraph("\n     Semester"));
-        PdfPCell c3=new PdfPCell(new Paragraph("\n  GPA"));
-        table.addCell(c1);
+       // PdfPCell c1=new PdfPCell(new Paragraph("\n S.No\n "));
+        PdfPCell c2=new PdfPCell(new Paragraph(Font.BOLD,"\n     Semester"));
+        PdfPCell c3=new PdfPCell(new Paragraph(Font.BOLD,"\n  GPA"));
+       // table.addCell(c1);
         table.addCell(c2);
         table.addCell(c3);
 
 
+        int se=1;
+        int sem = Integer.parseInt(getIntent().getStringExtra("sem"));
+        for(int i=0;i<sem;i++) {
 
-        for(int i=1;i<arr1.length;i++) {
-            String j=String.valueOf(i+1);
+            String j=String.valueOf(se);
             String l=arr1[i];
+            if(l!= "") {
          //   PdfPCell c4 = new PdfPCell(new Paragraph("\n "+j+"\n  "));
             PdfPCell c5=new PdfPCell(new Paragraph("\n   "+j+"\n  "));
+            se++;
             PdfPCell c6=new PdfPCell(new Paragraph("\n  "+l+"\n  "));
          //   table.addCell(c4);
             table.addCell(c5);
             table.addCell(c6);
+        }
         }
 
         document.add(image);

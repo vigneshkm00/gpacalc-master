@@ -35,7 +35,7 @@ public class showgpaActivity extends AppCompatActivity {
                 try {
                     String output;
                     File file = new File(file_name);
-                    if(file.exists()) {
+                   // if(file.exists()) {
                         String mod = getIntent().getStringExtra("mode");
                         if(mod.equals("GPA"))
                         {
@@ -56,11 +56,11 @@ public class showgpaActivity extends AppCompatActivity {
                             stringBuffer.append("\n" + output + "\n");
                         }
                         t1.append(stringBuffer.toString());
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(),"Please enter Appropriate Register Number",Toast.LENGTH_SHORT).show();
-                    }
+                   // }
+                  //  else
+                   // {
+                   //     Toast.makeText(getApplicationContext(),"Please enter Appropriate Register Number",Toast.LENGTH_SHORT).show();
+                   // }
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
