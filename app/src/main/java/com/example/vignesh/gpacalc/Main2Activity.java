@@ -42,6 +42,8 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     int reg12;
     float gpa, sum=0,cgpa;
     private String[] crdtra;
+    int x=0;
+    String s;
 
     public Main2Activity() {
         selections = new ArrayList<String>();
@@ -495,7 +497,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
                 int val,val1;
                 int  p;
-                String s;
+
 
                 for (int i = 0; i < ls2.getChildCount(); i++) {
 
@@ -563,10 +565,11 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                     if(mo.equals("CGPA"))
                     {
                         Intent j = new Intent(Main2Activity.this,MainActivity.class);
+                        Bundle bun = new Bundle();
                         j.putExtra("sum", sum1);
                         j.putExtra("credit", credit1);
                         j.putExtra("gpa",s);
-
+                        j.putExtras(bun);
                         setResult(sem1,j);
                         finish();
                     }

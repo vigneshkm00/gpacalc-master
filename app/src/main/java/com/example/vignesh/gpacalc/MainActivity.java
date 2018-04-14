@@ -32,8 +32,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
    static float sum=0;
    static float su;
    static int cr;
-   static String gpas[];
    static int seml=0;
+   static String[] gpas= new String[8];
+   int l=0;
    Button show;
    private DrawerLayout drl;
    private ActionBarDrawerToggle adt;
@@ -159,13 +160,48 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Check which request we're responding t
         Spinner s3 = (Spinner) findViewById(R.id.spinner3);
         String sem = s3.getSelectedItem().toString();
-        gpas[seml] =data.getStringExtra("gpa");
-        seml++;
+        String gpa = data.getStringExtra("gpa");
         int sems1 = Integer.parseInt(sem);
         super.onActivityResult(requestCode, resultCode, data);
         su = su + Float.parseFloat(data.getStringExtra("sum"));
         cr = cr + Integer.parseInt(data.getStringExtra("credit"));
+        switch (sems1)
+        {
+            case 1:
+                 gpas[l] = gpa;
+                break;
+            case 2:
+                l++;
+                gpas[l] = gpa;
+                break;
+            case 3:
+                l++;
+                gpas[l] = gpa;
+                break;
+            case 4:
+                l++;
+                gpas[l] = gpa;
+                break;
+            case 5:
+                l++;
+                gpas[l] = gpa;
+                break;
+            case 6:
+                l++;
+                gpas[l] = gpa;
+                break;
+            case 7:
+                l++;
+                gpas[l] = gpa;
+                break;
+            case 8:
+                gpas[l] = gpa;
+                l++;
+                break;
+
+        }
         if(resultCode==sems1) {
+            Toast.makeText(getApplicationContext(),"1:"+gpas[1]+"2:"+gpas[2]+"3:"+gpas[3]+".",Toast.LENGTH_LONG).show();
             showresult();
         }
 

@@ -42,11 +42,7 @@ public class Main3Activity extends AppCompatActivity implements dialogbox.dialog
                     openDialog();
                     return true;
                 case R.id.savaspdf1:
-                    if (mode.equals("GPA"))
-                    {
                         saveaspdf();
-                    }
-                    else return true;
                     // mTextMessage.setText(R.string.title_dashboard);
                     return true;
                 case R.id.shareb1:
@@ -126,15 +122,14 @@ public class Main3Activity extends AppCompatActivity implements dialogbox.dialog
             i.putExtras(sub1);
             startActivityForResult(i,101);
         }
-        else{
-
-            final String[] arr = getIntent().getStringArrayExtra("subj");
+        else
+            {
+            final String[] arr = getIntent().getStringArrayExtra("gpas");
             //   Toast.makeText(getApplicationContext(),selections[1]+arr[1]+crdts[1], Toast.LENGTH_SHORT).show();
             final Bundle sub1 = new Bundle();
             sub1.putStringArray("subj", arr);
             final String cgpa1 = String.format("%.2f",cgpa).toString();
-            final Intent i = new Intent(Main3Activity.this, pdfdisplay.class);
-            // i.putStringArrayListExtra("Sbj", arr);
+            final Intent i = new Intent(Main3Activity.this, pdf1display.class);
             i.putExtra("cgpa",cgpa1);
             i.putExtras(sub1);
             startActivityForResult(i,101);

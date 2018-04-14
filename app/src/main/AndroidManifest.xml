@@ -34,7 +34,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".pdfdisplay"
-            android:parentActivityName=".MainActivity" />
+          />
         <activity
             android:name=".Web_view"
             android:parentActivityName=".MainActivity" />
