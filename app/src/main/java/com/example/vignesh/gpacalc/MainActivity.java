@@ -78,14 +78,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             Intent i = new Intent(MainActivity.this,showgpaActivity.class);
                             i.putExtra("mode","GPA");
                             startActivity(i);
-                            Toast.makeText(getApplicationContext(),"open gpa show",Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(getApplicationContext(),"open gpa show",Toast.LENGTH_SHORT).show();
                         }
                         if (id1 == R.id.showcgpa1)
                         {
                             Intent i = new Intent(MainActivity.this,showgpaActivity.class);
                             i.putExtra("mode","CGPA");
                             startActivity(i);
-                            Toast.makeText(getApplicationContext(),"open gpa show",Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(getApplicationContext(),"open Cgpa show",Toast.LENGTH_SHORT).show();
                         }
                         if (id1== R.id.auportal)
                         {

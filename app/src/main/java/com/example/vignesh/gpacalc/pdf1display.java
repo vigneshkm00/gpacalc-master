@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,6 +72,8 @@ public class pdf1display extends AppCompatActivity {
         sve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar4);
+                pb.setVisibility(View.VISIBLE);
                 Toast.makeText(getApplicationContext(),"Please wait while we preparing PDF for you",Toast.LENGTH_SHORT).show();
                 regNo=rn.getText().toString();
                 if (rn.getText().toString().isEmpty()) {
@@ -201,7 +204,7 @@ public class pdf1display extends AppCompatActivity {
 
         table1.setSpacingAfter(1f);
         table1.setWidthPercentage(75);
-        PdfPCell c=new PdfPCell(new Paragraph(Font.BOLD, "\n    Chesmo GPA/CGPA Calculated Report \n  ", font));
+        PdfPCell c=new PdfPCell(new Paragraph(Font.BOLD, "\n    Chesmo GPA/CGPA Calculated Report \n \t\t      Register No:"+rn.getText().toString()+"\n\n", font));
 
         PdfPTable table2=new PdfPTable(1);
         table2.setSpacingBefore(1f);
@@ -256,6 +259,10 @@ public class pdf1display extends AppCompatActivity {
         // document.add(img);
         document.close();
         previewPdf();
+        ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar4);
+        pb.setVisibility(View.INVISIBLE);
+        setResult(101);
+        finish();
 
     }
 

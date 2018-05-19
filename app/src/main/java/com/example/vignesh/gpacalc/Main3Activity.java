@@ -51,7 +51,7 @@ public class Main3Activity extends AppCompatActivity implements dialogbox.dialog
                         String dep = getIntent().getStringExtra("gpa");
                         Intent si = new Intent();
                         si.setAction(Intent.ACTION_SEND);
-                        si.putExtra(Intent.EXTRA_TEXT, "GPA:" + dep + "\nThis GPA was calculated by the app \"GPA/CGPA Calculator\" Clink This Link to download.");
+                        si.putExtra(Intent.EXTRA_TEXT, "GPA:" + dep + "\nThis GPA was calculated by the app Chesmo \"GPA/CGPA Calculator\" Clink This Link to download.");
                         si.setType("text/plain");
                         startActivity(Intent.createChooser(si, "Send this message to"));
                     }
@@ -60,7 +60,7 @@ public class Main3Activity extends AppCompatActivity implements dialogbox.dialog
                         String cgpa1 = String.format("%.2f",cgpa).toString();
                         Intent si = new Intent();
                         si.setAction(Intent.ACTION_SEND);
-                        si.putExtra(Intent.EXTRA_TEXT, "CGPA:"+cgpa1+"\nThis CGPA was calculated by the app \"GPA/CGPA Calculator\" Clink This Link to download.");
+                        si.putExtra(Intent.EXTRA_TEXT, "CGPA:"+cgpa1+"\nThis CGPA was calculated by the app Chesmo \"GPA/CGPA Calculator\" Clink This Link to download.");
                         si.setType("text/plain");
                         startActivity(Intent.createChooser(si,"Send this message to"));
                     }
