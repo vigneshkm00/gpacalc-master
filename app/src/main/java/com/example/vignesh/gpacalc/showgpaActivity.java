@@ -2,6 +2,7 @@ package com.example.vignesh.gpacalc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,7 @@ public class showgpaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_showgpa);
+        final CardView card = (CardView) findViewById(R.id.res_card);
         b1 = (Button) findViewById(R.id.gpbtn);
         e1 = (EditText) findViewById(R.id.editText);
         t1 = (TextView) findViewById(R.id.textView6);
@@ -34,6 +36,7 @@ public class showgpaActivity extends AppCompatActivity {
                 file_name = e1.getText().toString();
                 if (!TextUtils.isEmpty(e1.getText().toString()))
                 {
+                    card.setVisibility(View.VISIBLE);
                     try {
                         String output;
                         File file = new File(file_name);

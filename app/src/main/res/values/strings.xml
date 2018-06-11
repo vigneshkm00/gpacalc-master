@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chesmo AU gpa/cgpa Calculator</string>
+    <string name="app_name">Chesmo AU GPA/CGPA Calculator</string>
 
     <string name="open">OPEN</string>
     <string name="close">CLOSE</string>
@@ -1106,4 +1106,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="save">Save</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

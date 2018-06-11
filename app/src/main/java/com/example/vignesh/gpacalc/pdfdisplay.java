@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -57,28 +58,14 @@ public class pdfdisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdfdisplay);
-
-
-
-        rn=(EditText)findViewById(R.id.Regno);
-
         arr1 = getIntent().getStringArrayExtra("subj");
         final int[] crdts1 = getIntent().getIntArrayExtra("cr");
         gpa=getIntent().getStringExtra("gpa");
         selections1 = getIntent().getStringArrayExtra("grds");
         // final String regno = {rn.getText().toString()};
-sve = (Button) findViewById(R.id.save);
-        sve.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar3);
                 pb.setVisibility(View.VISIBLE);
-                regNo=rn.getText().toString();
-                if (rn.getText().toString().isEmpty()) {
-                    rn.setError("Body is empty");
-                    rn.requestFocus();
-                    return;
-                }
+                regNo=getIntent().getStringExtra("regno");
                 try {
                     createPdfWrapper();
                 } catch (IOException e) {
@@ -86,11 +73,6 @@ sve = (Button) findViewById(R.id.save);
                 } catch (DocumentException e) {
                     e.printStackTrace();
                 }
-            }
-
-
-        });
-
     }
     private void createPdfWrapper() throws FileNotFoundException,DocumentException,IOException{
 
@@ -164,6 +146,8 @@ sve = (Button) findViewById(R.id.save);
         }
         String filename= regNo + ".pdf";
         pdfFile = new File(docsFolder.getAbsolutePath(),filename);
+      //  Uri uri = FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID, pdfFile);
+       // Uri photoURI = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".my.package.name.provider", createImageFile());
         OutputStream output = new FileOutputStream(pdfFile);
         Rectangle pages=new Rectangle(PageSize.A4);
         pages.setBackgroundColor(BaseColor.WHITE);
@@ -202,7 +186,7 @@ sve = (Button) findViewById(R.id.save);
 
         table1.setSpacingAfter(1f);
         table1.setWidthPercentage(75);
-        PdfPCell c=new PdfPCell(new Paragraph(Font.BOLD, "\n    Chesmo GPA/CGPA Calculated Report \n \t\t      Register No:"+rn.getText().toString()+"\n\n", font));
+        PdfPCell c=new PdfPCell(new Paragraph(Font.BOLD, "\n    Chesmo GPA/CGPA Calculated Report \n \t\t      Register No:"+getIntent().getStringExtra("regno").toString()+"\n\n", font));
 
         PdfPTable table2=new PdfPTable(1);
         table2.setSpacingBefore(1f);
@@ -268,13 +252,14 @@ sve = (Button) findViewById(R.id.save);
         if (list.size() > 0) {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
-            Uri uri = Uri.fromFile(pdfFile);
-            intent.setDataAndType(uri, "application/pdf");
+//            Uri uri = FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID, pdfFile);
+            Uri photoURI = FileProvider.getUriForFile(getApplicationContext(), getApplicationContext().getPackageName() + ".my.package.name.provider", pdfFile);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.setDataAndType(photoURI, "application/pdf");
 
             startActivity(intent);
         }else{
             Toast.makeText(this,"Download a PDF Viewer to see the generated PDF",Toast.LENGTH_SHORT).show();
         }
     }
-
 }

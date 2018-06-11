@@ -3,20 +3,13 @@
     <item
         android:id="@+id/hm"
         android:icon="@drawable/ic_done_black_24dp"
-        android:title="done"/>
-    <item
-        android:id="@+id/save1"
-        android:icon="@drawable/ic_save"
-        android:title="@string/save" />
+        android:title="Result"/>
+
 
     <item
         android:id="@+id/savaspdf1"
         android:icon="@drawable/ic_savepdf"
         android:title="SaveasPDF" />
 
-    <item
-        android:id="@+id/shareb1"
-        android:icon="@drawable/ic_share"
-        android:title="Share" />
 
 </menu>

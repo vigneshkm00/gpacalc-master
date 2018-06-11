@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="@android:color/holo_blue_bright">
+    android:background="@drawable/steelbg">
 
     <ImageView
         android:id="@+id/img"
@@ -41,7 +41,7 @@
         android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/img"
         android:text="Chesmo Anna University GPA/CGPA Calculator"
-        android:textColor="@android:color/background_dark"
+        android:textColor="#ffffff"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

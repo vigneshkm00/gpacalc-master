@@ -32,13 +32,33 @@
         <activity
             android:name=".showgpaActivity"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".pdfdisplay"
-          />
+        <activity android:name=".pdfdisplay" />
         <activity
             android:name=".Web_view"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".pdf1display"></activity>
+        <activity android:name=".pdf1display" />
+
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".About_us"
+            android:parentActivityName=".MainActivity"></activity>
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
     </application>
 
 </manifest>

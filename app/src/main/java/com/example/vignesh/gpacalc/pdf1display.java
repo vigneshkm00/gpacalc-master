@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -59,28 +60,15 @@ public class pdf1display extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf1display);
-
-
-
-        rn=(EditText)findViewById(R.id.Regno);
-
         arr1 = getIntent().getStringArrayExtra("subj");
         cgpa = getIntent().getStringExtra("cgpa");
 
         // final String regno = {rn.getText().toString()};
-        sve = (Button) findViewById(R.id.save);
-        sve.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar4);
                 pb.setVisibility(View.VISIBLE);
                 Toast.makeText(getApplicationContext(),"Please wait while we preparing PDF for you",Toast.LENGTH_SHORT).show();
-                regNo=rn.getText().toString();
-                if (rn.getText().toString().isEmpty()) {
-                    rn.setError("Body is empty");
-                    rn.requestFocus();
-                    return;
-                }
+                regNo=getIntent().getStringExtra("regno").toString();
+
                 try {
                     createPdfWrapper();
                 } catch (IOException e) {
@@ -88,10 +76,7 @@ public class pdf1display extends AppCompatActivity {
                 } catch (DocumentException e) {
                     e.printStackTrace();
                 }
-            }
 
-
-        });
 
     }
     private void createPdfWrapper() throws FileNotFoundException,DocumentException,IOException{
@@ -204,7 +189,7 @@ public class pdf1display extends AppCompatActivity {
 
         table1.setSpacingAfter(1f);
         table1.setWidthPercentage(75);
-        PdfPCell c=new PdfPCell(new Paragraph(Font.BOLD, "\n    Chesmo GPA/CGPA Calculated Report \n \t\t      Register No:"+rn.getText().toString()+"\n\n", font));
+        PdfPCell c=new PdfPCell(new Paragraph(Font.BOLD, "\n    Chesmo GPA/CGPA Calculated Report \n \t\t      Register No:"+getIntent().getStringExtra("regno").toString()+"\n\n", font));
 
         PdfPTable table2=new PdfPTable(1);
         table2.setSpacingBefore(1f);
@@ -275,8 +260,10 @@ public class pdf1display extends AppCompatActivity {
         if (list.size() > 0) {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
-            Uri uri = Uri.fromFile(pdfFile);
-            intent.setDataAndType(uri, "application/pdf");
+         //   Uri uri = Uri.fromFile(pdfFile);
+            Uri photoURI = FileProvider.getUriForFile(getApplicationContext(), getApplicationContext().getPackageName() + ".my.package.name.provider", pdfFile);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.setDataAndType(photoURI, "application/pdf");
 
             startActivity(intent);
         }else{

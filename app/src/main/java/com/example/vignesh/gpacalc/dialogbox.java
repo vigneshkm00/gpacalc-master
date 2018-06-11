@@ -6,9 +6,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDialogFragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by vignesh on 14/3/18.
@@ -35,8 +37,14 @@ public class dialogbox extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
            //             String name1 = name.getText().toString();
-                        String regno1 = regno.getText().toString();
-                        listener.applytext(regno1);
+                        if (TextUtils.isEmpty(regno.getText().toString()))
+                        {
+                            Toast.makeText(getContext(),"please enter the Reg No",Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            String regno1 = regno.getText().toString();
+                            listener.applytext(regno1);
+                        }
                     }
                 });
       //  name = view.findViewById(R.id.name);

@@ -5,42 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.vignesh.gpacalc.pdfdisplay">
-    <Button
-        android:id="@+id/save"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Save As PDF"
-        android:background="@drawable/rounded_edge"
-        android:textColor="?attr/colorBackgroundFloating"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Regno"
-        app:layout_constraintVertical_bias="0.917"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/Regno"
-        android:layout_width="281dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
-        android:ems="10"
-        android:hint="Enter your register number.."
-        android:inputType="number"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@+id/Regno"
-        tools:layout_editor_absoluteX="168dp" />
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="262dp" />
 </android.support.constraint.ConstraintLayout>

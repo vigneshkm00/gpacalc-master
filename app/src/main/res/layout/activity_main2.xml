@@ -8,10 +8,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,8 +20,8 @@
             android:id="@+id/listvm"
             android:layout_width="242dp"
             android:layout_height="match_parent"
-            android:visibility="visible"
             android:layout_marginBottom="8dp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -35,7 +35,7 @@
 
         <ListView
             android:id="@+id/listvm2"
-            android:layout_width="142dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
             android:visibility="visible"

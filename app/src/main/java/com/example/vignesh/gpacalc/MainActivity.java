@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -91,6 +92,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         {
                             Intent i = new Intent(MainActivity.this,Web_view.class);
                             startActivity(i);
+                        }
+                        if (id1 == R.id.fed)
+                        {
+                            Intent feed_back = new Intent(Intent.ACTION_VIEW);
+                            feed_back.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.tencent.ig"));
+                            startActivity(feed_back);
+                        }
+                        if (id1==R.id.abtus)
+                        {
+                            Intent abt_us = new Intent(MainActivity.this,About_us.class);
+                            startActivity(abt_us);
                         }
 
                         return true;
