@@ -169,7 +169,7 @@ public class pdf1display extends AppCompatActivity {
         rect.setBorder(Rectangle.BOX);
         rect.setBorderColor(BaseColor.BLACK);
 
-        document.add(new Paragraph("\n\n\n\n\n\n"));
+        document.add(new Paragraph("\n\n\n"));
 
 
         Drawable d=getResources().getDrawable(R.drawable.study);
@@ -183,7 +183,7 @@ public class pdf1display extends AppCompatActivity {
         //  float w=image.getScaledWidth();
         //float h=image.getScaledHeight();
 //Font font=FontFactory.getFont(FONT, BaseFont.IDENTITY_H,BaseFont.EMBEDDED);
-        Font font= new Font(Font.FontFamily.HELVETICA,20,Font.BOLD);
+        Font font= new Font(Font.FontFamily.HELVETICA,18,Font.BOLD);
         Font font1 = new Font(Font.FontFamily.HELVETICA,14,Font.BOLD);
         image.setAbsolutePosition(80f,250f);
         image.scaleAbsolute(410f,450f);
@@ -282,7 +282,7 @@ public class pdf1display extends AppCompatActivity {
         document.add(table_eachsem);
         document.add(table);
         document.add(table2);
-        document.add(rect);
+      //  document.add(rect);
         // document.add(img);
         document.close();
         previewPdf();
