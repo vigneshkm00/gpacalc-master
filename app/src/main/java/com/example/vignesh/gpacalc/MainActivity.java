@@ -155,7 +155,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                               for (int x = semes, y = 1; x >= 1; x--, y++) {
                                                   Intent s = new Intent(MainActivity.this, Main2Activity.class);
                                                   String x1 = String.format("%d", x);
+                                                  String x2 = String.format("%d",semes);
                                                   depsem.putString("sem", x1);
+                                                  depsem.putString("fin_sem",x2);
                                                   depsem.putString("mode", mode);
                                                   s.putExtras(depsem);
                                                   startActivityForResult(s, x);

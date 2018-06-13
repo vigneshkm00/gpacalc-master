@@ -1,8 +1,10 @@
 package com.example.vignesh.gpacalc;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -181,7 +183,8 @@ public class pdf1display extends AppCompatActivity {
         //  float w=image.getScaledWidth();
         //float h=image.getScaledHeight();
 //Font font=FontFactory.getFont(FONT, BaseFont.IDENTITY_H,BaseFont.EMBEDDED);
-        Font font= new Font(Font.FontFamily.HELVETICA,20);
+        Font font= new Font(Font.FontFamily.HELVETICA,20,Font.BOLD);
+        Font font1 = new Font(Font.FontFamily.HELVETICA,14,Font.BOLD);
         image.setAbsolutePosition(80f,250f);
         image.scaleAbsolute(410f,450f);
 
@@ -202,6 +205,44 @@ public class pdf1display extends AppCompatActivity {
         table2.addCell(de);
 
 
+        PdfPTable table_eachsem = new PdfPTable(3);
+        table_eachsem.setWidthPercentage(75);
+        table_eachsem.setSpacingAfter(1f);
+        table_eachsem.setSpacingBefore(1f);
+        float[] cwidth1={0.7f,4.3f,1f};
+        table_eachsem.setWidths(cwidth1);
+        int sem_1 = Integer.parseInt(getIntent().getStringExtra("sem"));
+
+        for(int i=1;i<=sem_1;i++) {
+            PdfPCell c_1=new PdfPCell(new Paragraph(Font.BOLD,"\n S.No\n ",font1));
+            PdfPCell c_2=new PdfPCell(new Paragraph(Font.BOLD,"\n     Subject  (Semester"+i+")\n",font1));
+            PdfPCell c_3=new PdfPCell(new Paragraph(Font.BOLD,"\n  Grades",font1));
+            table_eachsem.addCell(c_1);
+            table_eachsem.addCell(c_2);
+            table_eachsem.addCell(c_3);
+           // PdfPCell c_4 = new PdfPCell(new Paragraph("\n Semester"+i+"\n"));
+           // table_eachsem.addCell(c_4);
+            //int i_temp= i+1;
+            String temp = String.valueOf(i);
+            SharedPreferences sharedPreferences = getSharedPreferences(temp, Context.MODE_PRIVATE);
+           // String admin = sharedPreferences.getInt("subjs",1);
+           // SharedPreferences sharedPreferences = getSharedPreferences("1", Context.MODE_PRIVATE);
+            int no_of_sub = sharedPreferences.getInt("subjs",1);
+            for(int k=0;k<no_of_sub;k++) {
+                String mar = sharedPreferences.getString(String.valueOf(k),"Default");
+                String subject = sharedPreferences.getString("sub"+String.valueOf(k),"default");
+                String j=String.valueOf(k+1);
+                //     String k=arr1[i];
+                //  String l=selections1[i];
+                PdfPCell c4 = new PdfPCell(new Paragraph("\n "+j+"\n  "));
+                PdfPCell c5=new PdfPCell(new Paragraph("\n   "+subject+"\n  "));
+                PdfPCell c6=new PdfPCell(new Paragraph("\n  "+mar+"\n  "));
+                table_eachsem.addCell(c4);
+                table_eachsem.addCell(c5);
+                table_eachsem.addCell(c6);
+            }
+        }
+
 
         PdfPTable table=new PdfPTable(2);
 
@@ -212,8 +253,8 @@ public class pdf1display extends AppCompatActivity {
         float[] cwidth={2f,4f};
         table.setWidths(cwidth);
        // PdfPCell c1=new PdfPCell(new Paragraph("\n S.No\n "));
-        PdfPCell c2=new PdfPCell(new Paragraph(Font.BOLD,"\n     Semester"));
-        PdfPCell c3=new PdfPCell(new Paragraph(Font.BOLD,"\n  GPA"));
+        PdfPCell c2=new PdfPCell(new Paragraph(Font.BOLD,"\n     Semester",font1));
+        PdfPCell c3=new PdfPCell(new Paragraph(Font.BOLD,"\n  GPA",font1));
        // table.addCell(c1);
         table.addCell(c2);
         table.addCell(c3);
@@ -222,7 +263,7 @@ public class pdf1display extends AppCompatActivity {
         int se=1;
         int sem = Integer.parseInt(getIntent().getStringExtra("sem"));
         for(int i=0;i<sem;i++) {
-
+          //  addsemester(i);
             String j=String.valueOf(se);
             String l=arr1[i];
             if(l!= "") {
@@ -238,6 +279,7 @@ public class pdf1display extends AppCompatActivity {
 
         document.add(image);
         document.add(table1);
+        document.add(table_eachsem);
         document.add(table);
         document.add(table2);
         document.add(rect);
@@ -271,4 +313,31 @@ public class pdf1display extends AppCompatActivity {
         }
     }
 
+public void addsemester(int x)
+{
+    PdfPTable pdfPTable = new PdfPTable(3);
+    String temp = String.valueOf((x+1));
+    SharedPreferences sharedPreferences = getSharedPreferences(temp,MODE_PRIVATE);
+    PdfPCell c1=new PdfPCell(new Paragraph("\n S.No\n "));
+    PdfPCell c2=new PdfPCell(new Paragraph("\n     Subject"));
+    PdfPCell c3=new PdfPCell(new Paragraph("\n  Grades"));
+    pdfPTable.addCell(c1);
+    pdfPTable.addCell(c2);
+    pdfPTable.addCell(c3);
+    int no_of_sub = sharedPreferences.getInt("subjs",1);
+    for(int i=0;i<=no_of_sub;i++) {
+        String mar = sharedPreferences.getString(String.valueOf(i),"Default");
+        String subject = sharedPreferences.getString("sub"+String.valueOf(i),"default");
+        String j=String.valueOf(i+1);
+   //     String k=arr1[i];
+      //  String l=selections1[i];
+        PdfPCell c4 = new PdfPCell(new Paragraph("\n "+j+"\n  "));
+        PdfPCell c5=new PdfPCell(new Paragraph("\n   "+subject+"\n  "));
+        PdfPCell c6=new PdfPCell(new Paragraph("\n  "+mar+"\n  "));
+        pdfPTable.addCell(c4);
+        pdfPTable.addCell(c5);
+        pdfPTable.addCell(c6);
+    }
+
+}
 }

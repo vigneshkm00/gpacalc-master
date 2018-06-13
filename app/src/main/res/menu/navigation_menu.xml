@@ -8,11 +8,8 @@
         android:id="@+id/showcgpa1" />
     <item android:title="Open AU Portal"
         android:id="@+id/auportal"/>
-    <item
-        android:title="About us"
-        android:id="@+id/abtus" />
-    <item
-        android:title="Feedback"
-        android:id="@+id/fed" />
-
+    <item android:title="About us"
+        android:id="@+id/abtus"/>
+    <item android:id="@+id/fed"
+        android:title="feedback"/>
 </menu>

@@ -2,6 +2,7 @@ package com.example.vignesh.gpacalc;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -489,7 +491,15 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
         ls2.setAdapter(new CustomAdapter(this, lst));
 
-
+        String mo1 = getIntent().getStringExtra("mode");
+        String Init_sem = getIntent().getStringExtra("sem");
+        String fina_sem  = getIntent().getStringExtra("fin_sem");
+        if(mo1.equals("CGPA")) {
+            if (Init_sem.equals(fina_sem))
+            btn.setText("Calculate");
+            else
+                btn.setText("Next");
+        }
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -564,6 +574,25 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                     }
                     if(mo.equals("CGPA"))
                     {
+                        SharedPreferences sharedPreferences = getSharedPreferences(semester,Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                       // editor.putStringSet("grds",crdtra);
+                        editor.putInt("sem",sem1);
+                        int x = 0;
+                        for (String value : crdtra)
+                        {
+                           editor.putString(String.valueOf(x),value);
+                           x++;
+                        }
+                        int y =0 ;
+                        for (String value1 : arr)
+                        {
+                            editor.putString("sub"+String.valueOf(y),value1);
+                            y++;
+                        }
+                        editor.putInt("subjs",(x-1));
+                        editor.putString("noofsub",String.valueOf(x));
+                        editor.commit();
                         Intent j = new Intent(Main2Activity.this,MainActivity.class);
                         Bundle bun = new Bundle();
                         j.putExtra("sum", sum1);
